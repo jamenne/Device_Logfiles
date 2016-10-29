@@ -72,7 +72,7 @@ string LogDev::Time()
    oss << std::setw(2) << std::setfill('0') << timeinfo->tm_hour << "_" << std::setw(2) << std::setfill('0') << timeinfo->tm_min << "_" << std::setw(2) << std::setfill('0') << timeinfo->tm_sec; 
    string data = oss.str();
 
-   cout << data << endl;
+   //cout << data << endl;
 
    return data;
 }
@@ -86,6 +86,8 @@ void LogDev::Initialize(const string& file_name_base){
 	string help = "mkdir " + ss.str();
 
 	int returnval = system(help.c_str());
+
+	this->_path.str("");
 
 	this->_path << ss.str() << "/" << this->DateTime() << "_" << file_name_base <<".txt";
 
