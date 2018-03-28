@@ -81,7 +81,7 @@ void LogDev::Initialize(const string& file_name_base){
 
 	stringstream ss;
 
-	ss << "/home/e5-hardware/data/" << this->Date(); 
+	ss << "/home/e5-hardware/data/insitu/" << this->Date(); 
 
 	string help = "mkdir " + ss.str();
 
